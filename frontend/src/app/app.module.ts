@@ -5,16 +5,13 @@ import { MatButtonModule, MatCardModule, MatInputModule, MatSnackBarModule, MatT
 
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './messages.component'
-
+import { WebService } from './web.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
-  declarations: [
-    AppComponent, MessagesComponent
-  ],
-  imports: [
-    BrowserModule, BrowserAnimationsModule, MatButtonModule, MatCardModule, MatInputModule, MatSnackBarModule, MatToolbarModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [ AppComponent, MessagesComponent ],
+  imports: [ BrowserModule, BrowserAnimationsModule, HttpModule, MatButtonModule, MatCardModule, MatInputModule, MatSnackBarModule, MatToolbarModule ],
+  providers: [ WebService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
